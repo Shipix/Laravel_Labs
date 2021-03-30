@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
                 HomeMainSeeder::class,
                 VideoSeeder::class,
                 TestimonialSeeder::class,
+                LogoSeeder::class,
             ]
         );
     }
