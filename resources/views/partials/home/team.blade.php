@@ -7,29 +7,25 @@
 			</div>
 			<div class="row">
 				<!-- single member -->
-				<div class="col-sm-4">
-					<div class="member">
-						<img src="img/team/1.jpg" alt="">
-						<h2>Christinne Williams</h2>
-						<h3>Project Manager</h3>
+				@foreach ($datateam->where('fonction', '!=', 'CEO')->random(2) as $item)
+					@if ($loop->iteration == 2)
+					<div class="col-sm-4">
+						<div class="member">
+							{{-- ici on mets le patron --}}
+							<img src={{$datateam[0] -> img}} alt="">
+							<h2>{{$datateam[0] -> nom}} {{$datateam[0] -> prenom}}</h2>
+							<h3>{{$datateam[0] -> fonction}}</h3>
+						</div>
+					</div>		
+					@endif
+					<div class="col-sm-4">
+						<div class="member">
+							<img src={{$item->img}} alt="">
+							<h2>{{$item->nom}} {{$item->prenom}}</h2>
+							<h3>{{$item->fonction}}</h3>
+						</div>
 					</div>
-				</div>
-				<!-- single member -->
-				<div class="col-sm-4">
-					<div class="member">
-						<img src="img/team/2.jpg" alt="">
-						<h2>Christinne Williams</h2>
-						<h3>Junior developer</h3>
-					</div>
-				</div>
-				<!-- single member -->
-				<div class="col-sm-4">
-					<div class="member">
-						<img src="img/team/3.jpg" alt="">
-						<h2>Christinne Williams</h2>
-						<h3>Digital designer</h3>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>

@@ -12,7 +12,6 @@
 		<div id="hero-slider" class="owl-carousel">
 			@foreach ($datacarousel as $item)
 			<div class="item  hero-item" data-bg="{{$item->src}}">
-				<p>qsfqsfsf</p>
 			</div>
 			@endforeach
 		</div>

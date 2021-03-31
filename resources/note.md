@@ -43,6 +43,7 @@
     2)  Pouvoir rajouter des nouveaux membres
             a)  Nom/prenom
             b)  Fonction
+            c)  photo
 
 - Promotion:
 

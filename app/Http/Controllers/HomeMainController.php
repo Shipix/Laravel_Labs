@@ -8,6 +8,7 @@ use App\Models\HomeMain;
 use App\Models\homeTitre;
 use App\Models\Logo;
 use App\Models\Service;
+use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -31,8 +32,8 @@ class HomeMainController extends Controller
         $dataservice = Service::all();
         $datacontact = Contact::first();
         $datatitre = homeTitre::all();
-
         $datacarousel = Carousel::all();
+        $datateam = Team::all();
         return view ('page.home', compact('datacontact',
         'datahome',
         'dataurl',
@@ -41,7 +42,8 @@ class HomeMainController extends Controller
         'lastTesti',
         'dataservice',
         'datatitre',
-        'datacarousel'));
+        'datacarousel',
+        'datateam'));
     }
 
     /**

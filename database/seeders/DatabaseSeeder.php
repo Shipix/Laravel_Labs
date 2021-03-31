@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
                 ContactSeeder::class,
                 HomeTitreSeeder::class,
                 CarouselSeeder::class,
+                TeamSeeder::class,
+                NewsletterSeeder::class,
             ]
         );
     }

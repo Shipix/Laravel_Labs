@@ -7,8 +7,8 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est.</p>
 				</div>
 				<div class="col-md-3">
-					<div class="promo-btn-area">
-						<a href="" class="site-btn btn-2">Browse</a>
+					<div>
+						@include('partials.home.newletters')
 					</div>
 				</div>
 			</div>
