@@ -6,35 +6,17 @@
 			<div class="container">
 				<div class="row">
 					<!-- single card -->
+					@foreach ($dataservice->random(3) as $item)
 					<div class="col-md-4 col-sm-6">
 						<div class="lab-card">
 							<div class="icon">
-								<i class="flaticon-023-flask"></i>
+								<i class="{{$item->icon}}"></i>
 							</div>
-							<h2>Get in the lab</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
+							<h2>{{$item->titre}}</h2>
+							<p>{{Str::limit($item->description, 180)}}</p>
 						</div>
 					</div>
-					<!-- single card -->
-					<div class="col-md-4 col-sm-6">
-						<div class="lab-card">
-							<div class="icon">
-								<i class="flaticon-011-compass"></i>
-							</div>
-							<h2>Projects online</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-					<!-- single card -->
-					<div class="col-md-4 col-sm-12">
-						<div class="lab-card">
-							<div class="icon">
-								<i class="flaticon-037-idea"></i>
-							</div>
-							<h2>SMART MARKETING</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
@@ -45,7 +27,7 @@
 		<div class="about-contant">
 			<div class="container">
 				<div class="section-title">
-					<h2>{{$datahome -> titre}}</h2>
+					<h2>{{$datatitre[0]->titre}}</h2>
 				</div>
 				<div class="row">
 					<div class="col-md-6">

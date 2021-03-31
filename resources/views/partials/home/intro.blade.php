@@ -3,13 +3,18 @@
 		<div class="hero-content">
 			<div class="hero-center">
 				<img src={{$datalogo -> src}} alt="">
-				<p>Get your freebie template now!</p>
+				<div class="" data-bg="">
+					<p>Get your freebie template now!</p>
+				</div>
 			</div>
 		</div>
 		<!-- slider -->
 		<div id="hero-slider" class="owl-carousel">
-			<div class="item  hero-item" data-bg="img/01.jpg"></div>
-			<div class="item  hero-item" data-bg="img/02.jpg"></div>
+			@foreach ($datacarousel as $item)
+			<div class="item  hero-item" data-bg="{{$item->src}}">
+				<p>qsfqsfsf</p>
+			</div>
+			@endforeach
 		</div>
 </div>
 <!-- Intro Section -->

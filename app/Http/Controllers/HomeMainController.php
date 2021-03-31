@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carousel;
+use App\Models\Contact;
 use App\Models\HomeMain;
+use App\Models\homeTitre;
 use App\Models\Logo;
+use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -24,7 +28,20 @@ class HomeMainController extends Controller
         $last = $datatesti->last()->id;
         $lastTesti = $datatesti->whereBetween('id',[($last-5),($last)]);
 
-        return view ('page.home', compact('datahome','dataurl','datatesti','datalogo','lastTesti'));
+        $dataservice = Service::all();
+        $datacontact = Contact::first();
+        $datatitre = homeTitre::all();
+
+        $datacarousel = Carousel::all();
+        return view ('page.home', compact('datacontact',
+        'datahome',
+        'dataurl',
+        'datatesti',
+        'datalogo',
+        'lastTesti',
+        'dataservice',
+        'datatitre',
+        'datacarousel'));
     }
 
     /**

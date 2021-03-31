@@ -21,6 +21,10 @@ class DatabaseSeeder extends Seeder
                 VideoSeeder::class,
                 TestimonialSeeder::class,
                 LogoSeeder::class,
+                ServiceSeeder::class,
+                ContactSeeder::class,
+                HomeTitreSeeder::class,
+                CarouselSeeder::class,
             ]
         );
     }
