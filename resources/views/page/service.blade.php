@@ -4,6 +4,6 @@
     @include('partials.service.service')
     @include('partials.service.features')
     @include('partials.service.serviceCards')
-    @include('partials.all.newsletter')
+    @include('partials.all.promotion')
     @include('partials.all.contact')
 @endsection

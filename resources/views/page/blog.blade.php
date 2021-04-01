@@ -2,5 +2,5 @@
     @section('content')
         @include('partials.all.HeaderPage')
         @include('partials.blog.blogSection')
-        @include('partials.all.newsletter')
+        @include('partials.all.promotion')
     @endsection

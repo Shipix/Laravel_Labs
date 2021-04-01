@@ -1,5 +1,5 @@
-	<!-- Footer section -->
-	<footer class="footer-section">
-		<h2>2017 All rights reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></h2>
-	</footer>
-	<!-- Footer section end -->
+<!-- Footer section -->
+<footer class="footer-section">
+	<h2>{{$datafooter->texte}}<a href={{$datafooter->url}} target="_blank"> {{$datafooter->auteur}}</a></h2>
+</footer>
+<!-- Footer section end -->

@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Carousel;
 use App\Models\Contact;
+use App\Models\Footer;
 use App\Models\HomeMain;
 use App\Models\homeTitre;
 use App\Models\Logo;
+use App\Models\newsletter;
 use App\Models\Service;
 use App\Models\Team;
 use App\Models\Testimonial;
@@ -34,8 +36,11 @@ class HomeMainController extends Controller
         $datatitre = homeTitre::all();
         $datacarousel = Carousel::all();
         $datateam = Team::all();
+        $datanewletter = newsletter::first();
+        $datafooter = Footer::first();
         return view ('page.home', compact('datacontact',
         'datahome',
+        'datanewletter',
         'dataurl',
         'datatesti',
         'datalogo',
@@ -43,7 +48,8 @@ class HomeMainController extends Controller
         'dataservice',
         'datatitre',
         'datacarousel',
-        'datateam'));
+        'datateam',
+        'datafooter'));
     }
 
     /**

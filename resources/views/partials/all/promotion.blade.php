@@ -4,11 +4,11 @@
 			<div class="row">
 				<div class="col-md-9">
 					<h2>{{$datatitre[4]->titre}}</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est.</p>
+					<p>{{$datanewletter -> texte}}</p>
 				</div>
 				<div class="col-md-3">
 					<div>
-						@include('partials.home.newletters')
+						@include('partials.all.newletters')
 					</div>
 				</div>
 			</div>

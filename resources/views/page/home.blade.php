@@ -5,6 +5,6 @@
     @include('partials.home.testimonial')    
     @include('partials.home.service')   
     @include('partials.home.team')    
-    @include('partials.home.promotion') 
+    @include('partials.all.promotion') 
     @include('partials.all.contact') 
 @endsection

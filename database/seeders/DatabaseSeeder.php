@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
                 CarouselSeeder::class,
                 TeamSeeder::class,
                 NewsletterSeeder::class,
+                FooterSeeder::class,
             ]
         );
     }

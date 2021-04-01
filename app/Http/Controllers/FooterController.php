@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
 use App\Models\Footer;
-use App\Models\homeTitre;
-use App\Models\newsletter;
-use App\Models\Service;
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class FooterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,22 +14,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $datacontact = Contact::first();
-        $datafooter = Footer::first();
-        $datatitre = homeTitre::all();
-
-        $dataservicep = Service::paginate(9);
-
-        $dataservice = Service::all();
-        
-        $last = $dataservice->last()->id;
-
-        $lastServA = $dataservice->whereBetween('id',[($last-2),($last)]);
-        $lastServB = $dataservice->whereBetween('id',[($last-5),($last-3)]);
-        
-        $datanewletter = newsletter::first();
-
-        return view('page.service',compact("dataservicep","datanewletter","lastServA","lastServB","datacontact","datafooter","datatitre","dataservice"));
+        //
     }
 
     /**
@@ -60,10 +41,10 @@ class ServiceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show(Footer $footer)
     {
         //
     }
@@ -71,10 +52,10 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit(Footer $footer)
     {
         //
     }
@@ -83,10 +64,10 @@ class ServiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, Footer $footer)
     {
         //
     }
@@ -94,10 +75,10 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Footer  $footer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy(Footer $footer)
     {
         //
     }
