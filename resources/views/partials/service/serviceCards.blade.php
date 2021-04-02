@@ -6,7 +6,7 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="sv-card">
 						<div class="card-img">
-							<img src="img/card-1.jpg" alt="">
+							<img src="img/blog/blog-1.jpg" alt="">
 						</div>
 						<div class="card-text">
 							<h2>Get in the lab</h2>

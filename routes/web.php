@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeMainController;
 use App\Http\Controllers\NewsletterController;
@@ -16,12 +17,11 @@ Route::get('/Service', [ServiceController::class, 'index'])->name('service');
 Route::get('/Contact', [ContactController::class, 'index'])->name('contact');
 
 
-Route::get('/Blog', [BlogController::class, 'index'])->name('contact');
+Route::get('/Blog', [BlogController::class, 'index'])->name('blog');
 
 
-Route::get('/Blog-post', function () {
-    return view('page.blog-post'); 
-});
+Route::get('/Blog-post', [BlogPostController::class, 'index'])->name('contact');
+
 
 Auth::routes();
 
