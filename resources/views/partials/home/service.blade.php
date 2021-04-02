@@ -14,7 +14,7 @@
 						</div>
 						<div class="service-text">
 							<h2>{{$item->titre}}</h2>
-							<p>{{Str::limit($item->description, 180)}}</p>
+							<p>{{Str::limit($item->description, 150)}}</p>
 						</div>
 					</div>
 				</div>

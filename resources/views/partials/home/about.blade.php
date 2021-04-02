@@ -13,7 +13,7 @@
 								<i class="{{$item->icon}}"></i>
 							</div>
 							<h2>{{$item->titre}}</h2>
-							<p>{{Str::limit($item->description, 150)}}</p>
+							<p>{{Str::limit($item->description, 140)}}</p>
 						</div>
 					</div>
 					@endforeach
@@ -21,8 +21,6 @@
 			</div>
 		</div>
 		<!-- card section end-->
-
-
 		<!-- About contant -->
 		<div class="about-contant">
 			<div class="container">

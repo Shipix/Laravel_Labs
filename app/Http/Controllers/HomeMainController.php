@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MailSend;
 use App\Models\Carousel;
 use App\Models\Contact;
 use App\Models\Footer;
@@ -14,6 +15,7 @@ use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeMainController extends Controller
 {
@@ -70,7 +72,7 @@ class HomeMainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

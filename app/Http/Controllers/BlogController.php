@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Footer;
 use App\Models\homeTitre;
+use App\Models\Logo;
 use App\Models\newsletter;
 use Illuminate\Http\Request;
 
@@ -20,8 +21,8 @@ class BlogController extends Controller
     {   $datafooter = Footer::first();
         $datanewletter = newsletter::first();
         $datatitre = homeTitre::all();
-
-        return view('page.blog',compact("datatitre","datafooter","datanewletter"));
+        $datalogo = Logo::first();
+        return view('page.blog',compact("datalogo","datatitre","datafooter","datanewletter"));
     }
 
     /**

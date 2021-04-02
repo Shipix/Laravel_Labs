@@ -1,7 +1,7 @@
 <!-- Header section -->
 <header class="header-section">
 		<div class="logo ">
-			<img class="" style="width: 25%" src = "{{--{{$datalogo -> src}}--}}" alt=""><!-- Logo -->
+			<img class="" style="width: 25%" src = "{{$datalogo -> src}}" alt=""><!-- Logo -->
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fa fa-bars"></i></div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Footer;
+use App\Models\Logo;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -15,10 +16,12 @@ class ContactController extends Controller
      */
     public function index()
     {
+        $datalogo = Logo::first();
+
         $datacontact = Contact::first();
         $datafooter = Footer::first();
         
-        return view('page.contact',compact("datacontact","datafooter"));
+        return view('page.contact',compact("datalogo","datacontact","datafooter"));
     }
 
     /**

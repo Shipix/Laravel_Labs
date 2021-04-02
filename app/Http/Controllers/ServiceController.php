@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Footer;
 use App\Models\homeTitre;
+use App\Models\Logo;
 use App\Models\newsletter;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -18,6 +19,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
+        $datalogo = Logo::first();
+
         $datacontact = Contact::first();
         $datafooter = Footer::first();
         $datatitre = homeTitre::all();
@@ -33,7 +36,7 @@ class ServiceController extends Controller
         
         $datanewletter = newsletter::first();
 
-        return view('page.service',compact("dataservicep","datanewletter","lastServA","lastServB","datacontact","datafooter","datatitre","dataservice"));
+        return view('page.service',compact("datalogo","dataservicep","datanewletter","lastServA","lastServB","datacontact","datafooter","datatitre","dataservice"));
     }
 
     /**
