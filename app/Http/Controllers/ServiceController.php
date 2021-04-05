@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use App\Models\Contact;
 use App\Models\Footer;
 use App\Models\homeTitre;
@@ -30,13 +31,25 @@ class ServiceController extends Controller
         $dataservice = Service::all();
         
         $last = $dataservice->last()->id;
-
         $lastServA = $dataservice->whereBetween('id',[($last-2),($last)]);
         $lastServB = $dataservice->whereBetween('id',[($last-5),($last-3)]);
         
         $datanewletter = newsletter::first();
 
-        return view('page.service',compact("datalogo","dataservicep","datanewletter","lastServA","lastServB","datacontact","datafooter","datatitre","dataservice"));
+        $dataArticle = BlogPost::all();
+        $lastA = $dataArticle->last()->id;
+        $lastarticle = $dataArticle->whereBetween('id',[($lastA-2),($lastA)]);
+        
+        return view('page.service',compact("datalogo",
+        "dataservicep",
+        "datanewletter",
+        "lastServA",
+        "lastServB",
+        "datacontact",
+        "datafooter",
+        "datatitre",
+        "dataservice",
+        'lastarticle'));
     }
 
     /**

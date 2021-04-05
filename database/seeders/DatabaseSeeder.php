@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call(
             [
                 HomeMainSeeder::class,
+                CategorieSeeder::class,
+                FonctionSeeder::class,
+                JobSeeder::class,
                 VideoSeeder::class,
                 TestimonialSeeder::class,
                 LogoSeeder::class,
@@ -28,6 +31,9 @@ class DatabaseSeeder extends Seeder
                 TeamSeeder::class,
                 NewsletterSeeder::class,
                 FooterSeeder::class,
+                ArticleSeeder::class,
+                BlogPostSeeder::class,
+                BlogSeeder::class,
             ]
         );
     }

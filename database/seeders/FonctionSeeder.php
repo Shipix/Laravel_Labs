@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CategorieSeeder extends Seeder
+class FonctionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,28 +14,29 @@ class CategorieSeeder extends Seeder
      */
     public function run()
     {
-        DB::table("categories")->insert([
+        DB::table("fonctions")->insert(
 
+            [
                 [
-                    'nom'=>'Food',
+                    'fonction'=>'CEO',
                 ],
                 [
-                    'nom'=>'News',
+                    'fonction'=>'Designer',
                 ],
                 [
-                    'nom'=>'Infos',
+                    'fonction'=>'Devloper',
                 ],
                 [
-                    'nom'=>'Design',
+                    'fonction'=>'Projet Manager',
                 ],
                 [
-                    'nom'=>'Projet',
+                    'fonction'=>'Assistant manager',
                 ],
                 [
-                    'nom'=>'Art',
+                    'fonction'=>'Bloger',
                 ],
                 [
-                    'nom'=>'Science',
+                    'fonction'=>'Artist',
                 ]
             ]
         );
