@@ -19,31 +19,31 @@ class TeamSeeder extends Seeder
                 [
                    "nom"=>"Wil",
                    "prenom"=>"Sheepe",
-                   "fonction"=>"CEO",
+                   "fonction_id"=>1,
                    "img"=>"img/team/1.jpg", 
                 ],
                 [
                     "nom"=>"Zen",
-                    "prenom"=>"Zeniths",
-                    "fonction"=>"Designer",
+                    "prenom"=>"Designer",
+                    "fonction_id"=>2,
                     "img"=>"img/team/2.jpg", 
                  ],
                  [
                     "nom"=>"Oklm",
                     "prenom"=>"Au'Calme",
-                    "fonction"=>"Artiste",
+                    "fonction_id"=>3,
                     "img"=>"img/team/3.jpg", 
                  ],
                  [
                     "nom"=>"Shiipix",
                     "prenom"=>"CHIPIX",
-                    "fonction"=>"Project Asistan",
+                    "fonction_id"=>4,
                     "img"=>"img/team/2.jpg", 
                  ],
                  [
                     "nom"=>"Willi",
                     "prenom"=>"Chris",
-                    "fonction"=>"Project Manager",
+                    "fonction_id"=>5,
                     "img"=>"img/team/3.jpg", 
                  ]
 

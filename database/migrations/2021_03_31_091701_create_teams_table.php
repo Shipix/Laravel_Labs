@@ -17,7 +17,8 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->string("nom");
             $table->string("prenom");
-            $table->string('fonction');
+            $table->unsignedBigInteger('fonction_id');
+            $table->foreign('fonction_id')->references('id')->on('fonctions');
             $table->string('img');
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\MailSend;
 use App\Models\Carousel;
 use App\Models\Contact;
+use App\Models\Fonction;
 use App\Models\Footer;
 use App\Models\HomeMain;
 use App\Models\homeTitre;
@@ -29,7 +30,8 @@ class HomeMainController extends Controller
         $datalogo = Logo::first();
         $dataurl = Video::first();
         $datatesti = Testimonial::all();
-        
+        $datafonction = Fonction::all();
+
         $last = $datatesti->last()->id;
         $lastTesti = $datatesti->whereBetween('id',[($last-5),($last)]);
 
@@ -51,7 +53,7 @@ class HomeMainController extends Controller
         'datatitre',
         'datacarousel',
         'datateam',
-        'datafooter'));
+        'datafooter','datafonction'));
     }
 
     /**

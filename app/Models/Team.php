@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     use HasFactory;
+    public function fonctions()
+    {
+        return $this->belongsTo(Fonction::class,"fonction_id");
+    }
 }
