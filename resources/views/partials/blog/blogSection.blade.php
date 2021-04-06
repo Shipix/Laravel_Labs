@@ -9,15 +9,15 @@
 						<div class="post-thumbnail">
 							<img src={{$item->img}} alt="">
 							<div class="post-date">
-								<h2>03</h2>
-								<h3>Nov 2017</h3>
+								<h2>{{$item->jour}}</h2>
+								<h3>{{$item->moi}}</h3>
 							</div>
 						</div>
 						<div class="post-content">
 							<h2 class="post-title">{{$item->titre}}</h2>
 							<div class="post-meta">
-								<a href="">{{$item->categorie_id}}</a>
-								<a href="">{{$item->tag}}</a>
+								<a href="">{{$item->categories->nom}}</a>
+								<a href="">{{$item->tags->hashtag}}</a>
 								<a href="">commentaires {{$item->commentaire}}</a>
 							</div>
 							<p>{{$item->texte}}</p>

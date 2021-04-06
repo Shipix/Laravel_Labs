@@ -19,7 +19,12 @@ class CreateBlogPostsTable extends Migration
             $table->string('titre');
             $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories');
-            $table->string('tag');
+
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags');
+
+            $table->string("jour");
+            $table->string("moi");
             $table->integer('commentaire');
             $table->text('texte');
             $table->timestamps();
