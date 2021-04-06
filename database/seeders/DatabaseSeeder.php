@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(
             [
                 HomeMainSeeder::class,
+                TagSeeder::class,
                 CategorieSeeder::class,
                 FonctionSeeder::class,
                 JobSeeder::class,

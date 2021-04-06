@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\BlogPost;
+use App\Models\Categorie;
 use App\Models\Footer;
 use App\Models\homeTitre;
 use App\Models\Logo;
 use App\Models\newsletter;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -22,7 +25,16 @@ class BlogController extends Controller
         $datanewletter = newsletter::first();
         $datatitre = homeTitre::all();
         $datalogo = Logo::first();
-        return view('page.blog',compact("datalogo","datatitre","datafooter","datanewletter"));
+        $datacategorie = Categorie::all();
+        $datatag = Tag::all();
+        $dataPost = BlogPost::all();
+        return view('page.blog',compact("datacategorie",
+        "datalogo",
+        "datatitre",
+        "datafooter",
+        "datanewletter",
+        "datatag",
+        "dataPost"));
     }
 
     /**

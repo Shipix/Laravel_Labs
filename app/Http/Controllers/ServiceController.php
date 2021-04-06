@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
+use App\Models\Categorie;
 use App\Models\Contact;
 use App\Models\Footer;
 use App\Models\homeTitre;
@@ -25,7 +26,8 @@ class ServiceController extends Controller
         $datacontact = Contact::first();
         $datafooter = Footer::first();
         $datatitre = homeTitre::all();
-
+        $datacategorie = Categorie::all();
+        
         $dataservicep = Service::paginate(9);
 
         $dataservice = Service::all();
