@@ -7,7 +7,7 @@
 					<!-- Post item -->
 					<div class="post-item">
 						<div class="post-thumbnail">
-							<img src={{$item->img}} alt="">
+							<img src={{asset('img/blog/'.$item->img)}} alt="">
 							<div class="post-date">
 								<h2>{{$item->jour}}</h2>
 								<h3>{{$item->moi}}</h3>
@@ -21,7 +21,7 @@
 								<a href="">commentaires {{$item->commentaire}}</a>
 							</div>
 							<p>{{$item->texte}}</p>
-							<a href='/Blog-post' class="read-more">Read More</a>
+							<a href='/blog-post/{{$item->id}}' class="read-more">Read More</a>
 						</div>
 					</div>
 					@endforeach

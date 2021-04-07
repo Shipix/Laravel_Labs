@@ -66,8 +66,17 @@ class BlogController extends Controller
      */
     public function show($id)
     {
+        $datatitre = homeTitre::all();
+        $datanewletter = newsletter::first();
+        $datalogo = Logo::first();
+        $datafooter = Footer::first();
+
         $show = BlogPost::find($id);
-        return view("page.blog-post", compact('show'));
+        return view("page.blog-post", compact('show',
+        'datatitre',
+        'datanewletter',
+        'datalogo',
+        'datafooter'));
 
     }
 

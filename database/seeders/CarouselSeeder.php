@@ -17,11 +17,11 @@ class CarouselSeeder extends Seeder
         DB::table('carousels')->insert(
             [
                 [
-                    "src"=>"img/01.jpg",
+                    "src"=>"01.jpg",
                     "texte"=>"Get your freebie template now!",
                 ],                
                 [
-                    "src" => "img/02.jpg",
+                    "src" => "02.jpg",
                     "texte" => "Get your'z freesbies tomplate won!",
                 ] 
             ]

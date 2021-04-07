@@ -12,7 +12,7 @@
 					<div class="col-sm-4">
 						<div class="member">
 							{{-- ici on mets le patron --}}
-							<img src={{$datateam[0] -> img}} alt="">
+							<img src={{asset('img/team/'.$datateam[0]->img)}} alt="">
 							<h2>{{$datateam[0] -> nom}} {{$datateam[0] -> prenom}}</h2>
 							<h3>{{$datateam[0]->fonctions->fonction}}</h3>
 						</div>
@@ -20,7 +20,7 @@
 					@endif
 					<div class="col-sm-4">
 						<div class="member">
-							<img src={{$item->img}} alt="">
+							<img src={{asset('img/team/'.$item->img)}} alt="">
 							<h2>{{$item->nom}} {{$item->prenom}}</h2>
 							<h3>{{$item->fonctions->fonction}}</h3>
 						</div>

@@ -7,7 +7,7 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="sv-card">
 						<div class="card-img" >
-							<img src={{$item->img}} alt="">
+							<img src={{asset('img/blog/'.$item->img)}} alt="">
 						</div>
 						<div class="card-text">
 							<h2>{{$item->titre}}</h2>
