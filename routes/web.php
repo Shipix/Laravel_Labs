@@ -25,3 +25,8 @@ Auth::routes();
 Route::get('/inscription', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/mail-send',[NewsletterController::class,'store']);
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');

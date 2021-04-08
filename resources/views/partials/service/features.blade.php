@@ -43,6 +43,9 @@
 					@endforeach
 				</div>
 			</div>
+			<div class="text-center mt100">
+				<a href="#serviceCards" class="site-btn">Browse</a>
+			</div>
 		</div>
-</div>
+	</div>
 <!-- features section end-->

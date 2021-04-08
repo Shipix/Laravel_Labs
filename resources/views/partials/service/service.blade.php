@@ -19,11 +19,11 @@
 					</div>
 				</div>
 				@endforeach
-				{{ $dataservicep->links() }}
+				<div class="page-pagination">
+					{{ $dataservicep->links() }}
+				</div>
 			</div>
-			<div class="text-center">
-				<a href="" class="site-btn">Browse</a>
-			</div>
+
 		</div>
 </div>
 <!-- services section end -->
