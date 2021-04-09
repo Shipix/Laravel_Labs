@@ -1,17 +1,19 @@
-<!-- Promotion section -->
-<div class="promotion-section">
+
+	<!-- newsletter section -->
+	<div class="newsletter-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-9">
-					<h2>{{$datatitre[4]->titre}}</h2>
-					<p>{{$datanewletter -> texte}}</p>
-				</div>
 				<div class="col-md-3">
-					<div>
-						@include('partials.all.newletters')
-					</div>
+					<h2>{{$datatitre[4]->titre}}</h2>
+				</div>
+				<div class="col-md-9">
+					<!-- newsletter form -->
+					<form class="nl-form">
+						<input type="text" placeholder="Your e-mail here">
+						<button class="site-btn btn-2">Newsletter</button>
+					</form>
 				</div>
 			</div>
 		</div>
-</div>
-<!-- Promotion section end-->
+	</div>
+	<!-- newsletter section end-->

@@ -29,7 +29,7 @@ class HomeTitreSeeder extends Seeder
                     "titre"=>"GET IN THE LAB AND MEET THE TEAM",
                 ],
                 [
-                    "titre"=>"Are you ready to stand out?",
+                    "titre"=>"Newsletter",
                 ],
             ]
         );

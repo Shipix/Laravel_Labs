@@ -17,18 +17,10 @@ class JobSeeder extends Seeder
         DB::table("jobs")->insert(
             [
 
-                [
-                    "job"=>"Admin"
-                ],
-                [
-                    "job"=>"Webmaster"
-                ],
-                [
-                    "job"=>"Redacteur"
-                ],
-                [
-                    "job"=>"Membre"
-                ]
+                [   "job"=>"Admin"  ],
+                [   "job"=>"Webmaster"  ],
+                [   "job"=>"Redacteur"  ],
+                [   "job"=>"Membre" ]
             ]
         );
     }
