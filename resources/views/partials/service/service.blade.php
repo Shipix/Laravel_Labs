@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				@endforeach
-				<div class="page-pagination">
+				<div class="">
 					{{ $dataservicep->links() }}
 				</div>
 			</div>

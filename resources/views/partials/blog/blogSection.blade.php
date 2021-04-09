@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-sm-7 blog-posts">
-					@foreach ($dataPost as $item)
+					@foreach ($dataPostp as $item)
 					<!-- Post item -->
 					<div class="post-item">
 						<div class="post-thumbnail">
@@ -27,10 +27,8 @@
 					@endforeach
 
 					<!-- Pagination -->
-					<div class="page-pagination">
-						<a class="active" href="">01.</a>
-						<a href="">02.</a>
-						<a href="">03.</a>
+					<div >
+							{{ $dataPostp->links() }}
 					</div>
 				</div>
 				<!-- Sidebar area -->

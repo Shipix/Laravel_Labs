@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
+use App\Models\Categorie;
 use App\Models\Footer;
 use App\Models\homeTitre;
 use App\Models\Logo;
@@ -22,8 +23,9 @@ class BlogPostController extends Controller
         $datatitre = homeTitre::all();
         $datanewletter = newsletter::first();
         $datafooter = Footer::first();
+        $datacategorie = Categorie::all();
 
-        return view('page.blog-post',compact("datalogo","datatitre","datanewletter","datafooter"));
+        return view('page.blog-post',compact("datalogo","datatitre","datanewletter","datafooter","datacategorie"));
     }
 
     /**

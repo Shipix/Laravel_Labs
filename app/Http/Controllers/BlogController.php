@@ -28,13 +28,16 @@ class BlogController extends Controller
         $datacategorie = Categorie::all();
         $datatag = Tag::all();
         $dataPost = BlogPost::all();
+
+        $dataPostp = BlogPost::paginate(3);
+
         return view('page.blog',compact("datacategorie",
         "datalogo",
         "datatitre",
         "datafooter",
         "datanewletter",
         "datatag",
-        "dataPost"));
+        "dataPost","dataPostp"));
     }
 
     /**
@@ -70,13 +73,17 @@ class BlogController extends Controller
         $datanewletter = newsletter::first();
         $datalogo = Logo::first();
         $datafooter = Footer::first();
+        $datacategorie = Categorie::all();
+        $datatag = Tag::all();
 
         $show = BlogPost::find($id);
         return view("page.blog-post", compact('show',
         'datatitre',
         'datanewletter',
         'datalogo',
-        'datafooter'));
+        'datatag',
+        'datafooter',
+        'datacategorie'));
 
     }
 
